@@ -2,16 +2,17 @@ import { useState } from "react";
 import { InputField } from "./InputField";
 import { Button } from "./ui/button";
 
-interface ReadmeFormProps {
+type ReadmeFormProps = {
   onSubmit: (formData: FormData) => void;
-}
+};
 
-interface FormData {
+type FormData = {
   projectName: string;
   description: string;
   nodeVersion: string;
   features: string;
-}
+};
+
 const ReadmeForm = ({ onSubmit }: ReadmeFormProps) => {
   const [formData, setFormData] = useState<FormData>({
     projectName: "",

@@ -3,7 +3,9 @@
 import { useRouter } from "next/navigation";
 import { generateReadme } from "@/lib/utils";
 import ReadmeForm from "@/components/ReadmeForm";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import Header from "@/components/Header";
+import Title from "@/components/Title";
+
 export default function BuildPage() {
   const router = useRouter();
 
@@ -19,19 +21,14 @@ export default function BuildPage() {
       formData.nodeVersion,
       formData.features
     );
-    // Store the generated README in localStorage
     localStorage.setItem("generatedReadme", readmeContent);
-    // Navigate to the result page
     router.push("/result");
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">Build Your README</h1>
-        <ThemeToggle />
-      </div>
+    <>
+      <Title title="Build Your README" />
       <ReadmeForm onSubmit={handleGenerateReadme} />
-    </div>
+    </>
   );
 }

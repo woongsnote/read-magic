@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 
 interface ReadmeDisplayProps {
@@ -15,7 +15,7 @@ const ReadmeDisplay = ({ content }: ReadmeDisplayProps) => {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 max-w-4xl mx-auto">
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-2xl font-bold">Generated README:</h2>
         <Button onClick={handleCopy}>

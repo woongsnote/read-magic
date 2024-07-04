@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ReadmeDisplay from "@/components/ReadmeDisplay";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import Title from "@/components/Title";
 
 export default function ResultPage() {
   const [readme, setReadme] = useState("");
@@ -17,17 +17,14 @@ export default function ResultPage() {
   }, []);
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">Your Generated README</h1>
-        <ThemeToggle />
-      </div>
+    <>
+      <Title title="Your Generated README" />
       {readme ? (
         <ReadmeDisplay content={readme} />
       ) : (
         <p>No README generated yet.</p>
       )}
-      <div className="mt-4">
+      <div className="mt-4 mx-auto flex max-w-4xl items-center">
         <Link href="/build">
           <Button variant="outline" className="mr-2">
             Build Another README
@@ -37,6 +34,6 @@ export default function ResultPage() {
           <Button variant="ghost">Back to Home</Button>
         </Link>
       </div>
-    </div>
+    </>
   );
 }

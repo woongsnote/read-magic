@@ -1,9 +1,8 @@
-import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-interface InputFieldProps {
+type InputFieldProps = {
   label: string;
   name: string;
   value: string;
@@ -11,7 +10,7 @@ interface InputFieldProps {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   textarea?: boolean;
-}
+};
 
 export function InputField({
   label,
