@@ -1,70 +1,167 @@
 # ReadMagic
 
-Build a README draft fast!
+Build a clean README draft in seconds.
 
-## Table of Contents
+[Live Demo](https://read-magic.vercel.app) · [Repository](https://github.com/woongsnote/read-magic)
 
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+## Overview
 
-## Prerequisites
+ReadMagic is a lightweight README generator that turns a few project details into a reusable Markdown draft.
 
-Before you begin, ensure you have met the following requirements:
+Enter your project name, description, required Node.js version, and feature list. ReadMagic generates a structured `README.md` draft that you can copy and customize for your project.
 
-- You have installed Node.js LTS version
-  - You can check your Node.js version by running `node --version`
-  - If you need to update or install Node.js, visit [the official Node.js website](https://nodejs.org/)
-
-## Installation
-
-Follow these steps to install and set up the project:
-
-1. Clone the repository:
-
-   ```
-   git clone https://github.com/woongsnote/read-magic.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```
-   cd read-magic
-   ```
-
-3. Install dependencies:
-   ```
-   npm install
-   ```
-
-## Usage
-
-Explain how to use your project. For example:
-
-```
-npm run dev
-```
+The project focuses on providing a quick starting point rather than generating a fully completed README.
 
 ## Features
 
-- Nextjs
-- copy to clipboard
-- fast
+* Generate a README draft from simple project information
+* Convert comma-separated features into a Markdown list
+* Include commonly used README sections automatically
+* Copy the generated Markdown to the clipboard
+* Create another draft without returning to the home page
+* Support light, dark, and system themes
+* Generate and store the draft directly in the browser
+
+## How It Works
+
+1. Enter the project name and description.
+2. Specify the required Node.js version.
+3. Add project features separated by commas.
+4. Select **Generate README**.
+5. Review the generated Markdown and copy it to the clipboard.
+6. Replace the placeholder repository and contact information before publishing.
+
+The generated draft includes:
+
+* Table of Contents
+* Prerequisites
+* Installation
+* Usage
+* Features
+* Contributing
+* License
+* Contact
+
+## Tech Stack
+
+* Next.js 14
+* React 18
+* TypeScript
+* Tailwind CSS
+* Radix UI
+* next-themes
+* Lucide React
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js LTS
+* npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/woongsnote/read-magic.git
+```
+
+Move into the project directory:
+
+```bash
+cd read-magic
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+
+Runs the application in development mode.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run start
+```
+
+Runs the production build.
+
+```bash
+npm run lint
+```
+
+Checks the project with ESLint.
+
+## Project Structure
+
+```text
+read-magic/
+├── app/
+│   ├── build/
+│   ├── result/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── ui/
+│   ├── ReadmeDisplay.tsx
+│   ├── ReadmeForm.tsx
+│   └── ThemeToggle.tsx
+├── lib/
+│   └── utils.ts
+└── public/
+```
+
+## Current Scope
+
+ReadMagic currently uses a predefined Markdown template.
+
+The generated README contains placeholder repository and contact information, so the final draft should be reviewed and edited before being published.
+
+Potential future improvements include:
+
+* Customizable README sections
+* Additional template options
+* Markdown preview
+* Repository and author information inputs
+* Download as a `README.md` file
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions, issues, and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
 
-## Contact
+## Author
 
-woongsnote - woongsnote@gmail.com
+**Jiwoong Moon**
 
-Project Link: [https://github.com/woongsnote/read-magic](https://github.com/woongsnote/read-magic)
+* GitHub: [@woongsnote](https://github.com/woongsnote)
+* Blog: [woongsnote.dev](https://woongsnote.dev)
